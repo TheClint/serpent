@@ -11,15 +11,18 @@
 
 <?php
 
-    require_once('class/serpent.php');
+    require_once('class/Serpent.php');
 
-    $serpent1 = new Serpent("lalalla", 2.3, 5, '2023-01-13 11:15:12', "sonnette", "m");
+    $test = ["lalalla", 2.3, 5, '2023-01-13 11:15:12', "sonnette", "m"];
+   
+    $serpent1 = new Serpent($test);
     $serpent1->add();
-    $serpent1->setNom("ohoho");
+    $serpent1->setNom("ihihi");
     $serpent1->update();
     
+    $serpentDel = Serpent::read(130);
+    $serpentDel->delete();
 
-    // var_dump(Serpent::read(6)['nom']);
 ?>
     
 </body>
